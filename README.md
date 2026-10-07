@@ -93,6 +93,7 @@ See [`.env.example`](.env.example) for the full list with explanations. In short
 | Variable | Required | Purpose |
 | --- | --- | --- |
 | `PORT` | no (default `8787`) | port to listen on |
+| `DATA_DIR` | no (default `./data`) | where the conversation/message mapping files live - point it outside the deployed app folder on a host that replaces that folder each release |
 | `BRIDGE_TOKEN` | yes | shared-secret path segment for both webhook URLs |
 | `CHATWOOT_BASE_URL` | no (default `https://app.chatwoot.com`) | Chatwoot instance base URL |
 | `CHATWOOT_INBOX_IDENTIFIER` | yes | the API-channel inbox's identifier |

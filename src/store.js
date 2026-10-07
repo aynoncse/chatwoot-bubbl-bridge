@@ -3,7 +3,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const DATA_DIR = path.join(__dirname, '..', 'data');
+// Defaults to the repo-local data/ folder, which is right for local dev. On a host where the
+// deployed app folder is replaced wholesale on every release (Azure App Service's wwwroot), point
+// DATA_DIR at persistent storage outside it (/home/data) - otherwise a deploy wipes every
+// contact->conversation mapping and the next inbound message opens a duplicate Chatwoot
+// conversation for a consumer who already had one.
+const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, '..', 'data');
 const CONVERSATIONS_FILE = path.join(DATA_DIR, 'conversations.json');
 const MESSAGES_FILE = path.join(DATA_DIR, 'messages.json');
 
