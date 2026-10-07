@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aynon-taploom/chatwoot-bubbl-bridge.git"
+    "url": "git+https://github.com/aynoncse/chatwoot-bubbl-bridge.git"
   },
   "type": "commonjs",
   "engines": {
